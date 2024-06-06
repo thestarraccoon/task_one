@@ -52,4 +52,9 @@ class User extends Authenticatable
     protected $guarded = ['user_id'];
 
     const UPDATED_AT = null;
+
+    public function events()
+    {
+        return $this->belongsToMany(Event::class,'event_participants', 'participant_id', 'event_id');
+    }
 }

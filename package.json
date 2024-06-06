@@ -1,18 +1,26 @@
 {
     "private": true,
+    "type": "module",
     "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production"
+        "dev": "vite",
+        "watch": "vite build --watch",
+        "prod": "npm run build",
+        "build": "vite build"
     },
     "devDependencies": {
+        "@popperjs/core": "^2.11.8",
         "axios": "^0.25",
+        "bootstrap": "^5.3.3",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
+        "postcss": "^8.1.14",
+        "sass": "^1.77.4",
+        "vite-plugin-require": "^1.2.14"
+    },
+    "dependencies": {
+        "laravel-vite-plugin": "^1.0.4",
+        "save-dev": "^0.0.1-security",
+        "vite": "^5.2.12",
+        "vite-plugin-commonjs": "^0.10.1"
     }
 }
